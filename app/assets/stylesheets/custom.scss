@@ -6,6 +6,7 @@ $gray-darker: #222;
 $gray: #555;
 $gray-light: #777;
 $gray-medium-light: #eaeaea;
+$danger-text: #a94442;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -148,6 +149,21 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .is-invalid;
+  .form-control {
+    color: $danger-text;
+  }
 }
 
 /* miscellaneous */
